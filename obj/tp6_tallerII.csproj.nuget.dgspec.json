@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj": {}
+    "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj": {
+    "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj",
         "projectName": "tp6_tallerII",
-        "projectPath": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj",
-        "packagesPath": "C:\\Users\\Juan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\obj\\",
+        "projectPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tp6_tallerII.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Juan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Data.SQLite": {
               "target": "Package",
               "version": "[8.0.10, )"

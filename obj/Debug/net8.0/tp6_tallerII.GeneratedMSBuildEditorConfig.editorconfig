@@ -9,39 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tp6_tallerII
 build_property.RootNamespace = tp6_tallerII
-build_property.ProjectDir = C:\Users\Juan\OneDrive\Escritorio\Facultad\3er_anio-2do_cuat\taller_de_lenguajes_II\tl2-tp6-2024-Jasimus\
+build_property.ProjectDir = C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 8.0
+build_property.RazorLangVersion = 2.1
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Juan\OneDrive\Escritorio\Facultad\3er_anio-2do_cuat\taller_de_lenguajes_II\tl2-tp6-2024-Jasimus
+build_property.MSBuildProjectDirectory = C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/Home/Index.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/Home/Privacy.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/Shared/Error.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Productos/CrearProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWFyUHJvZHVjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Productos/EliminarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVsaW1pbmFyUHJvZHVjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Productos/ListarProductos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXExpc3RhclByb2R1Y3Rvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Productos/ModificarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXE1vZGlmaWNhclByb2R1Y3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/_ViewImports.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/_ViewStart.cshtml]
+[C:/Users/Alumno/Desktop/tl2-tp6-2024-Jasimus/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Juan/OneDrive/Escritorio/Facultad/3er_anio-2do_cuat/taller_de_lenguajes_II/tl2-tp6-2024-Jasimus/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-6ez9hwcdvv

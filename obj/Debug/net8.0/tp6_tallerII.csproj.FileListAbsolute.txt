@@ -1,0 +1,9 @@
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.AssemblyInfoInputs.cache
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.AssemblyInfo.cs
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.RazorAssemblyInfo.cache
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.RazorAssemblyInfo.cs
+C:\Users\Alumno\Desktop\tl2-tp6-2024-Jasimus\obj\Debug\net8.0\tp6_tallerII.sourcelink.json

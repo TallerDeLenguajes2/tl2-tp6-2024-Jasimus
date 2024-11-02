@@ -1,0 +1,8 @@
+@model List<Producto_space.Producto>
+<h1>Lista de Productos</h1>
+<ul>
+@foreach (var p in Model)
+{
+    <li><p>@p.Descripcion</p><p>@p.Precio</p></li>
+}
+</ul>

@@ -3,9 +3,7 @@ using Producto_space;
 using ProductoRepository_space;
 
 [ApiController]
-[Route("Productos")]
-
-public class ProductosController : ControllerBase
+public class ProductosController : Controller
 {
     ProductoRepository pr = new ProductoRepository();
     [HttpGet]

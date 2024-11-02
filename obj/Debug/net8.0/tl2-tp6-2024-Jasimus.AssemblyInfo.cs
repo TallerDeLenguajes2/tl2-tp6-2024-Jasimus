@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tl2-tp6-2024-Jasimus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01e21f2dba5affa04d5c49544f6748756bf54f41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91eae2d097740cbf0c7ff109684fde6c75283f34")]
 [assembly: System.Reflection.AssemblyProductAttribute("tl2-tp6-2024-Jasimus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tl2-tp6-2024-Jasimus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

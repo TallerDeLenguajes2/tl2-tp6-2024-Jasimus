@@ -1,15 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Producto_space;
 using ProductoRepository_space;
-
-[ApiController]
+namespace tp6_tallerII.Controllers;
 public class ProductosController : Controller
 {
     ProductoRepository pr = new ProductoRepository();
+    public IActionResult Index()
+    {
+        return View();
+    }
     [HttpGet]
     public IActionResult ListarProductos()
     {
-        return View(pr.ListarProductos);
+        return View(pr.ListarProductos());
     }
 
     [HttpPost]

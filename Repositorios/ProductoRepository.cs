@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Producto_space;
 
@@ -9,14 +10,16 @@ public class ProductoRepository
 
     public int CrearProducto(Producto producto)
     {
+           string query = "INSERT INTO Productos(Descripcion, Precio) VALUES (@descripcion, @precio);";
         using (SqliteConnection connection = new SqliteConnection(connectionString))
         {
             connection.Open();
-                
-            string query = "INSERT INTO Productos(Descripcion, Precio) VALUES (@descripcion, @precio);";
-
+            
             SqliteCommand command = new SqliteCommand(query, connection);
-            command.Parameters.AddWithValue("@descripcion", producto.Descripcion);
+           
+            // command.Parameters.Add(new SqliteParameter("@descripcion", producto.Descripcion));
+            // command.Parameters.Add(new SqliteParameter("@precio", producto.Precio));
+             command.Parameters.AddWithValue("@descripcion", producto.Descripcion);
             command.Parameters.AddWithValue("@precio", producto.Precio);
 
             return command.ExecuteNonQuery();

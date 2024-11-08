@@ -15,17 +15,30 @@ public class ProductosController : Controller
         return View(pr.ListarProductos());
     }
 
+    [HttpGet]
+    public IActionResult CrearProducto()
+    {
+        return View();
+    }
+
     [HttpPost]
     public IActionResult CrearProducto(Producto producto)
     {
         int cant = pr.CrearProducto(producto);
-        return View(cant);
+        return RedirectToAction("Index", "Productos");
     }
 
-    [HttpPut]
-    public IActionResult ModificarProducto(int id, Producto producto)
+    [HttpGet]
+    public IActionResult ModificarProducto(int id)
     {
-        int cant = pr.ModificarProducto(id, producto);
+        var producto = pr.ObtenerProducto(id);
+        return View(producto);
+    }
+
+    [HttpPost]
+    public IActionResult ModificarProducto(Producto producto)
+    {
+        int cant = pr.ModificarProducto(producto.IdProducto, producto);
         return View(cant);
     }
 

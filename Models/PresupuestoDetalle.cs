@@ -10,7 +10,7 @@ namespace PresupuestoDetalle_space
         public Producto Producto { get => producto; set => producto = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
 
-        public PresupuestoDetalle(int? idProducto, string? descripcionProducto, int? precio, int? cantidad)
+        public PresupuestoDetalle(int idProducto, string descripcionProducto, int? precio, int? cantidad)
         {
             producto = new Producto(idProducto, descripcionProducto, precio);
             this.cantidad = cantidad ?? default(int);

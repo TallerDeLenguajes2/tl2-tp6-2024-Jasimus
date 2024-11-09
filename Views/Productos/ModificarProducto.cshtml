@@ -1,12 +1,15 @@
 @{
-    ViewData["Title"] = "Modificar Producto";
+    ViewData["Title"] = "ModificarProducto";
 }
-
+<h1>Modificar Producto</h1>
 @using tp6_tallerII.Models
+@model Producto_space.Producto
+
 
 <form asp-controller="Productos" asp-action="ModificarProducto" method="post">
+    <input type="hidden" asp-for="IdProducto" value="@Model.IdProducto">
     <div class="form-group">
-        <label for="Descripcion">Descripcion</label>
+        <label for="Descripcion">Descripción</label>
         <input type="text" asp-for="Descripcion" name="Descripcion" class="form-control">
     </div>
     <div class="form-group">

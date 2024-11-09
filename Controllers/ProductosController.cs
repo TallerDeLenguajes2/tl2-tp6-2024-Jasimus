@@ -7,7 +7,7 @@ public class ProductosController : Controller
     ProductoRepository pr = new ProductoRepository();
     public IActionResult Index()
     {
-        return View();
+        return View("ListarProductos", pr.ListarProductos());
     }
     [HttpGet]
     public IActionResult ListarProductos()
@@ -39,13 +39,19 @@ public class ProductosController : Controller
     public IActionResult ModificarProducto(Producto producto)
     {
         int cant = pr.ModificarProducto(producto.IdProducto, producto);
-        return View(cant);
+        return RedirectToAction("Index", "Productos");
     }
 
-    [HttpDelete]
+    [HttpGet]
     public IActionResult EliminarProducto(int id)
     {
-        int cant = pr.EliminarProducto(id);
-        return View(cant);
+        var producto = pr.ObtenerProducto(id);
+        return View(producto);
+    }
+
+    public IActionResult EliminarProducto(Producto producto)
+    {
+        int cant = pr.EliminarProducto(producto.IdProducto);
+        return RedirectToAction("Index", "Productos");
     }
 }

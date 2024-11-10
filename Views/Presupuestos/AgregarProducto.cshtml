@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "AgregarProducto";
+}
+@using tp6_tallerII.Models
+
+<h1>Agregar Producto a Presupuesto de Destinatario @ViewBag.Presupuesto.NombreDestinatario</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Id Producto</th>
+        <th scope="col">Descripción Producto</th>
+        <th scope="col"></th>
+    </tr>
+    @foreach(var p in @ViewBag.productos)
+    {
+        <tr>
+            <td>@p.IdProducto</td>
+            <td>@p.Descripcion</td>
+            <td>
+                <a asp-action="AgregarProductoCantidad" asp-route-idPre="@ViewBag.Presupuesto.IdPresupuesto" asp-route-idProd="@p.IdProducto" class="btn btn-success">
+                    Agregar
+                </a>
+            </td>
+        </tr>
+    }
+</table>

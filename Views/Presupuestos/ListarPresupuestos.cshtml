@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "ListarPresupuestos";
+}
+@using tp6_tallerII.Models
+@model List<Presupuesto_space.Presupuesto>
+
+<h1>Presupuestos</h1>
+
+<div class="mb-3">
+    <a asp-action="CrearPresupuesto" class="btn btn-primary">Crear</a>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Id Presupuesto</th>
+        <th scope="col">Nombre Destinatario</th>
+        <th scope="col"></th>
+    </tr>
+@foreach(var p in Model)
+{
+    <tr>
+        <td>@p.IdPresupuesto</td>
+        <td>@p.NombreDestinatario</td>
+        <td class="text-center">
+            <a asp-action="DetallePresupuesto" asp-route-id="@p.IdPresupuesto" class="btn btn-warning">Detalle</a>
+            <a asp-action="EliminarPresupuesto" asp-route-id="@p.IdPresupuesto" class="btn btn-danger">Eliminar</a>
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "CrearPresupuestos";
+}
+@using tp6_tallerII.Models
+@model Presupuesto_space.Presupuesto
+
+<form asp-controller="Presupuestos" asp-action="CrearPresupuesto" method="post">
+    <div class="form-group">
+        <label for="NombreDestinatario">Nombre Destinatario</label>
+        <input type="text" asp-for="NombreDestinatario" name="NombreDestinatario" class="form-control">
+    </div>
+    <div class="text-center m-5">
+        <input type="submit" title="Enviar" class="btn btn-success">
+    </div>
+</form>

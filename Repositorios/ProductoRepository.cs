@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Sqlite;
 using Producto_space;
+using tp6_tallerII.Controllers;
 
 namespace ProductoRepository_space;
 public class ProductoRepository
@@ -48,13 +49,13 @@ public class ProductoRepository
 
     public List<Producto> ListarProductos()
     {
+        List<Producto> productos = new List<Producto>();
         using(SqliteConnection connection = new SqliteConnection(connectionString))
         {
             connection.Open();
             string query = "SELECT * FROM Productos;";
             SqliteCommand command = new SqliteCommand(query, connection);
             
-            var productos = new List<Producto>();
 
             using(var reader = command.ExecuteReader())
             {

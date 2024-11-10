@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "DetallePresupuesto";
+}
+@using tp6_tallerII.Models
+@model Presupuesto_space.Presupuesto
+
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Mensaje
+    </div>
+@if(!string.IsNullOrEmpty(ViewBag.Mensaje))
+{
+}
+
+<h1>Detalle Presupuesto</h1>
+
+<div class="mb-3">
+    <a href="Presupuestos/Index" class="btn btn-primary">
+        <i class="bi-arrow-left"><--</i>
+    </a>
+</div>
+
+
+<table class="table table-bordered">
+    <legend>Presupuesto de Destinatario @Model.NombreDestinatario</legend>
+    <tr>
+        <th scope="col">Id Producto</th>
+        <th scope="col">Descripción Producto</th>
+        <th scope="col">Cantidad</th>
+    </tr>
+    @foreach(var d in @Model.Detalle)
+    {
+        <tr>
+            <td>@d.Producto.IdProducto</td>
+            <td>@d.Producto.Descripcion</td>
+            <td>@d.Cantidad</td>
+        </tr>
+    }
+</table>
+
+<div class="mb-3">
+    <a asp-action="AgregarProducto" asp-route-id="@Model.IdPresupuesto" class="btn btn-primary">Agregar Producto</a>
+</div>

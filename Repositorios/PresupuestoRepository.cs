@@ -3,6 +3,7 @@ using PresupuestoDetalle_space;
 using ProductoRepository_space;
 using Microsoft.Data.Sqlite;
 using System.Security.Cryptography.X509Certificates;
+using Producto_space;
 
 namespace PresupuestoRepository_space;
 public class PresupuestoRepository
@@ -132,6 +133,40 @@ public class PresupuestoRepository
 
             connection.Close();
         }
+    }
+
+    public Presupuesto ObtenerPresupuesto(int id)
+    {
+        Presupuesto presupuesto = null;
+        using (SqliteConnection connection = new SqliteConnection(connectionString))
+        {
+            connection.Open();
+            
+            string query = "SELECT * FROM presupuestos WHERE idPresupuesto = @id";
+            string query1 = "SELECT * FROM productos INNER JOIN (SELECT * FROM PresupuestosDetalle WHERE idPresupuesto = @id) P USING(idProducto)";
+            SqliteCommand command1 = new SqliteCommand(query, connection);
+            SqliteCommand command2 = new SqliteCommand(query1, connection);
+            command1.Parameters.AddWithValue("@id", id);
+            command2.Parameters.AddWithValue("@id", id);
+            using(var reader = command1.ExecuteReader())
+            {
+                while(reader.Read())
+                {
+                    presupuesto = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), reader["NombreDestinatario"].ToString());
+                }
+            }
+            using(var reader = command2.ExecuteReader())
+            {
+                while(reader.Read())
+                {
+                    PresupuestoDetalle pd = new PresupuestoDetalle(Convert.ToInt32(reader["idProducto"]), reader["Descripcion"].ToString(), Convert.ToInt32(reader["Precio"]), Convert.ToInt32(reader["Cantidad"]));
+                    presupuesto.Detalle.Add(pd);
+                }
+            }
+
+            connection.Close();
+        }
+        return presupuesto;
     }
 
 }

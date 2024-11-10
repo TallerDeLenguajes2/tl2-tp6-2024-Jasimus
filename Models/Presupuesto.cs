@@ -12,6 +12,11 @@ namespace Presupuesto_space
         public List<PresupuestoDetalle> Detalle { get => detalle; set => detalle = value; }
 
 
+        public Presupuesto()
+        {
+            idPresupuesto = 0;
+        }
+
         public Presupuesto(int idPresupuesto, string nombreDestinatario)
         {
             detalle = new List<PresupuestoDetalle>();

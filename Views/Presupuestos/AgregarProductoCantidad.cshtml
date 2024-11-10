@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "AgregarProductoCantidad";
+}
+@using tp6_tallerII.Models
+
+<h1>Cantidad de Productos @ViewBag.Producto.Descripcion</h1>
+
+<form asp-action="AgregarProducto" asp-controller="Presupuestos">
+    <input type="hidden" name="idPre" value="@ViewBag.IdPre">
+    <input type="hidden" name="idProd" value="@ViewBag.Producto.IdProducto">
+    <div class="form-goup">
+        <label for="cant">Cantidad</label>
+        <input type="number" name="cant" class="form-control">
+    </div>
+    <div class="mt-5 text-center">
+        <input type="submit" class="btn btn-success" title="Agregar">
+    </div>
+</form>

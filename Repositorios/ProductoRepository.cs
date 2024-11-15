@@ -102,11 +102,15 @@ public class ProductoRepository
         {
             connection.Open();
 
+            string query1 = "DELETE FROM PresupuestosDetalle WHERE idProducto = @id";
             string query = "DELETE FROM Productos WHERE idProducto = @id;";
             SqliteCommand command = new SqliteCommand(query, connection);
+            var command1 = new SqliteCommand(query1, connection);
 
             command.Parameters.AddWithValue("@id", id);
+            command1.Parameters.AddWithValue("@id", id);
 
+            command1.ExecuteNonQuery();
             return command.ExecuteNonQuery();
 
             connection.Close();

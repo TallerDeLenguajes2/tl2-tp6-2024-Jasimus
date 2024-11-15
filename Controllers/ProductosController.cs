@@ -25,7 +25,7 @@ public class ProductosController : Controller
     public IActionResult CrearProducto(Producto producto)
     {
         int cant = pr.CrearProducto(producto);
-        return RedirectToAction("Index", "Productos");
+        return RedirectToAction("ListarProductos", "Productos");
     }
 
     [HttpGet]
@@ -39,7 +39,7 @@ public class ProductosController : Controller
     public IActionResult ModificarProducto(Producto producto)
     {
         int cant = pr.ModificarProducto(producto.IdProducto, producto);
-        return RedirectToAction("Index", "Productos");
+        return RedirectToAction("ListarProductos", "Productos");
     }
 
     [HttpGet]
@@ -49,9 +49,10 @@ public class ProductosController : Controller
         return View(producto);
     }
 
+    [HttpPost]
     public IActionResult EliminarProducto(Producto producto)
     {
         int cant = pr.EliminarProducto(producto.IdProducto);
-        return RedirectToAction("Index", "Productos");
+        return RedirectToAction("ListarProductos", "Productos");
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Presupuesto_space;
+using PresupuestoDetalle_space;
 using PresupuestoRepository_space;
 using ProductoRepository_space;
 using tp6_tallerII.Controllers;
@@ -33,7 +34,7 @@ public class PresupuestosController : Controller
     public IActionResult CrearPresupuesto(Presupuesto presupuesto)
     {
         int cant = pr.CrearPresupuesto(presupuesto);
-        return RedirectToAction("Index", "Presupuestos");
+        return RedirectToAction("ListarPresupuestos", "Presupuestos");
     }
 
     [HttpGet("{id}")]
@@ -56,7 +57,14 @@ public class PresupuestosController : Controller
         if(presupuesto != null)
         {
             ViewBag.Presupuesto = presupuesto;
-            ViewBag.Productos = productos.ListarProductos();
+            var produc = productos.ListarProductos();
+            ViewBag.cantidadProductos = 0;
+            foreach(PresupuestoDetalle pd in presupuesto.Detalle)
+            {
+                int i = produc.FindIndex(p => p.IdProducto == pd.Producto.IdProducto);
+                produc.RemoveAt(i);
+            }
+            ViewBag.Productos = produc;
             return View();
         }
         else return RedirectToAction("Index", "Presupuestos");
@@ -83,9 +91,24 @@ public class PresupuestosController : Controller
             return View();
         }
 
-        ViewBag.Mensaje = "El producto ya está incluído en este presupuesto";
         return RedirectToAction("DetallePresupuesto", "Presupuestos", new {id = idPre});
 
     }
+
+    [HttpGet]
+    public IActionResult EliminarPresupuesto(int id)
+    {
+        var presupuesto = pr.ObtenerPresupuesto(id);
+        return View(presupuesto);
+    }
+
+    [HttpPost]
+    public IActionResult EliminarPresupuesto(Presupuesto presupuesto)
+    {
+        int i = presupuesto.IdPresupuesto;
+        int cant = pr.EliminarPresupuesto(i);
+        return RedirectToAction("ListarPresupuestos", "Presupuestos");
+    }
+
 
 }

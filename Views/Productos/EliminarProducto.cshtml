@@ -4,12 +4,12 @@
 @using tp6_tallerII.Models
 @model Producto_space.Producto
 
-<form asp-controller="Productos" asp-action="EliminarProducto">
+<form asp-controller="Productos" asp-action="EliminarProducto" method="post">
     <legend>Eliminar Producto</legend>
     <p>¿Estás seguro que deseas eliminar el producto @Model.Descripcion?</p>
     <input type="hidden" asp-for="IdProducto" value="@Model.IdProducto">
     <div class="form-group">
-        <input type="submit" class="btn btn-danger" title="Si">
-        <a asp-action="Index" class="btn btn-success">No</a>
+        <input type="submit" class="btn btn-danger" value="Si">
+        <a asp-action="ListarProductos" class="btn btn-success">No</a>
     </div>
 </form>

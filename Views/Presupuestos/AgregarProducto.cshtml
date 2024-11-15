@@ -5,13 +5,14 @@
 
 <h1>Agregar Producto a Presupuesto de Destinatario @ViewBag.Presupuesto.NombreDestinatario</h1>
 
+
 <table class="table table-bordered">
     <tr>
         <th scope="col">Id Producto</th>
         <th scope="col">Descripción Producto</th>
         <th scope="col"></th>
     </tr>
-    @foreach(var p in @ViewBag.productos)
+    @foreach(var p in @ViewBag.Productos)
     {
         <tr>
             <td>@p.IdProducto</td>

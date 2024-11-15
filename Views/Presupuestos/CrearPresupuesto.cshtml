@@ -2,14 +2,23 @@
     ViewData["Title"] = "CrearPresupuestos";
 }
 @using tp6_tallerII.Models
-@model Presupuesto_space.Presupuesto
+@model Cliente_space.Cliente
 
-<form asp-controller="Presupuestos" asp-action="CrearPresupuesto" method="post">
-    <div class="form-group">
-        <label for="NombreDestinatario">Nombre Destinatario</label>
-        <input type="text" asp-for="NombreDestinatario" name="NombreDestinatario" class="form-control">
-    </div>
-    <div class="text-center m-5">
-        <input type="submit" title="Enviar" class="btn btn-success">
-    </div>
-</form>
+<table class="table table-bordered">
+    <legend>Clientes</legend>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+    </tr>
+    @foreach(Cliente c in @Model)
+    {
+        <tr>@c.ClienteId</tr>
+        <tr>@c.Nombre</tr>
+        <tr>@c.Email</tr>
+        <tr>
+            <a asp-action="CrearPresupuesto" asp-route-idCliente="@c.ClienteId">Agregar</a>
+        </tr>
+    }
+</table>

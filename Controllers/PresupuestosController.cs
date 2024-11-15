@@ -27,14 +27,15 @@ public class PresupuestosController : Controller
 
     public IActionResult CrearPresupuesto()
     {
-        return View();
+        var clientes = cr.ListarClientes();
+        return View(clientes);
     }
 
     [HttpPost]
 
-    public IActionResult CrearPresupuesto(Presupuesto presupuesto)
+    public IActionResult CrearPresupuesto(int idCliente)
     {
-        int cant = pr.CrearPresupuesto(presupuesto);
+        int cant = pr.CrearPresupuesto(idCliente);
         return RedirectToAction("ListarPresupuestos", "Presupuestos");
     }
 

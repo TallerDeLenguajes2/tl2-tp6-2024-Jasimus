@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj": {}
+    "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj": {
+    "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj",
         "projectName": "tl2-tp6-2024-Jasimus",
-        "projectPath": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj",
-        "packagesPath": "C:\\Users\\Juan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan\\OneDrive\\Escritorio\\Facultad\\3er_anio-2do_cuat\\taller_de_lenguajes_II\\tl2-tp6-2024-Jasimus\\obj\\",
+        "projectPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\tl2-tp6-2024-Jasimus.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Desktop\\tl2-tp6-2024-Jasimus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Juan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

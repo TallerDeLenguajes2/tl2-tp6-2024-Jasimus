@@ -9,6 +9,7 @@ public class PresupuestosController : Controller
 {
     PresupuestoRepository pr = new PresupuestoRepository();
     ProductoRepository productos = new ProductoRepository();
+    ClienteRepository cr = new ClienteRepository();
 
     [HttpGet]
     public IActionResult Index()

@@ -1,27 +1,27 @@
 using PresupuestoDetalle_space;
+using Cliente_space;
 namespace Presupuesto_space
 {
     public class Presupuesto
     {
         int idPresupuesto;
-        string nombreDestinatario;
+        Cliente cliente;
         List<PresupuestoDetalle> detalle;
 
         public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
-        public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
+        public Cliente Cliente { get => cliente; set => cliente = value; }
         public List<PresupuestoDetalle> Detalle { get => detalle; set => detalle = value; }
-
 
         public Presupuesto()
         {
             idPresupuesto = 0;
         }
 
-        public Presupuesto(int idPresupuesto, string nombreDestinatario)
+        public Presupuesto(int idPresupuesto, Cliente cliente)
         {
             detalle = new List<PresupuestoDetalle>();
             this.idPresupuesto = idPresupuesto;
-            this.nombreDestinatario = nombreDestinatario;
+            this.cliente = cliente;
         }
 
         public int MontoPresupuesto()

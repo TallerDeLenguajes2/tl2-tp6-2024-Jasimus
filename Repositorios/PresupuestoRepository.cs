@@ -9,7 +9,7 @@ namespace PresupuestoRepository_space;
 public class PresupuestoRepository
 {
     string connectionString = "Data Source=db/Tienda.db;Cache=Shared;";
-    public int CrearPresupuesto(Presupuesto presupuesto)
+    public int CrearPresupuesto(Presupuesto presupuesto, int clienteId)
     {
         using (SqliteConnection connection = new SqliteConnection(connectionString))
         {

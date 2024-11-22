@@ -20,7 +20,7 @@
 {
     <tr>
         <td>@p.IdPresupuesto</td>
-        <td>@p.NombreDestinatario</td>
+        <td>@p.Cliente.Nombre</td>
         <td class="text-center">
             <a asp-action="DetallePresupuesto" asp-route-id="@p.IdPresupuesto" class="btn btn-warning">Detalle</a>
             <a asp-action="EliminarPresupuesto" asp-route-id="@p.IdPresupuesto" class="btn btn-danger">Eliminar</a>

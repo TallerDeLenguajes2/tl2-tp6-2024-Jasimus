@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "ListarClientes";
+}
+@using tp6_tallerII.Models
+@model List<Cliente_space.Cliente>
+
+<table class="table table-bordered">
+<tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Email</th>
+    <th scope="col">Teléfono</th>
+    <th scope="col"></th>
+</tr>
+
+@foreach (var c in Model)
+{
+    <tr>
+        <td>@c.ClienteId</td>
+        <td>@c.Nombre</td>
+        <td>@c.Email</td>
+        <td>@c.Telefono</td>
+        <td class="text-center">
+            <a asp-action="ModificarCliente" asp-route-id="@c.ClienteId" class="btn btn-warning">Modificar</a>
+            <a asp-action="EliminarCliente" asp-route-id="@c.ClienteId" class="btn btn-danger">Eliminar</a>
+        </td>
+    </tr>
+}
+</table>
+
+<a asp-action="CrearCliente" class="mt-3 btn btn-primary">Crear</a>

@@ -6,7 +6,7 @@
 
 <form asp-controller="Presupuestos" asp-action="EliminarPresupuesto">
     <legend>Eliminar Presupuesto</legend>
-    <p>¿Estás seguro que deseas eliminar el presupuesto de @Model.NombreDestinatario?</p>
+    <p>¿Estás seguro que deseas eliminar el presupuesto de @Model.Cliente.Nombre?</p>
     <input type="hidden" asp-for="IdPresupuesto" value="@Model.IdPresupuesto">
     <div class="form-group">
         <input type="submit" class="btn btn-danger" value="Si">

@@ -2,6 +2,8 @@ using Presupuesto_space;
 using PresupuestoDetalle_space;
 using ProductoRepository_space;
 using Microsoft.Data.Sqlite;
+using ClienteRepository_space;
+using Cliente_space;
 using System.Security.Cryptography.X509Certificates;
 using Producto_space;
 
@@ -9,6 +11,7 @@ namespace PresupuestoRepository_space;
 public class PresupuestoRepository
 {
     string connectionString = "Data Source=db/Tienda.db;Cache=Shared;";
+    ClienteRepository cr = new ClienteRepository();
     public int CrearPresupuesto(int clienteId)
     {
         using (SqliteConnection connection = new SqliteConnection(connectionString))
@@ -42,7 +45,8 @@ public class PresupuestoRepository
             {
                 while(reader.Read())
                 {
-                    Presupuesto p = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), reader["NombreDestinatario"].ToString());
+                    Cliente cliente = cr.ObtenerCliente(Convert.ToInt32(reader["ClienteId"]));
+                    Presupuesto p = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), cliente);
                     presupuestos.Add(p);
                 }
             }
@@ -74,7 +78,8 @@ public class PresupuestoRepository
                 {
                     if (i == 0)
                     {
-                        presupuesto = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), Convert.ToInt32(reader["ClienteId"]));
+                        Cliente cliente = cr.ObtenerCliente(Convert.ToInt32(reader["ClienteId"]));
+                        presupuesto = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), cliente);
                     }
                     PresupuestoDetalle dp = new PresupuestoDetalle(Convert.ToInt32(reader["idProducto"]), reader["Descripcion"].ToString(), Convert.ToInt32(reader["Precio"]), Convert.ToInt32(reader["Cantidad"]));
 
@@ -157,7 +162,8 @@ public class PresupuestoRepository
             {
                 while(reader.Read())
                 {
-                    presupuesto = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), reader["NombreDestinatario"].ToString());
+                    var cliente = cr.ObtenerCliente(Convert.ToInt32(reader["ClienteId"]));
+                    presupuesto = new Presupuesto(Convert.ToInt32(reader["idPresupuesto"]), cliente);
                 }
             }
             using(var reader = command2.ExecuteReader())
@@ -173,5 +179,4 @@ public class PresupuestoRepository
         }
         return presupuesto;
     }
-
 }

@@ -3,7 +3,7 @@ using Cliente_space;
 namespace Presupuesto_space
 {
     public class Presupuesto
-    {
+    {   
         int idPresupuesto;
         Cliente cliente;
         List<PresupuestoDetalle> detalle;

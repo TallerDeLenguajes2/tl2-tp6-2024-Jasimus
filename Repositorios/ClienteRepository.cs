@@ -1,12 +1,14 @@
 using Cliente_space;
 namespace ClienteRepository_space;
+using Microsoft.Data.Sqlite;
 
 public class  ClienteRepository
 {
     string connectionString = "Data Source=db/Tienda.db;Cache=Shared;";
+
     public int CrearCliente(Cliente cliente)
     {
-        using(SqliteConnection connection = SqliteConnection(connectionString))
+        using(SqliteConnection connection = new SqliteConnection(connectionString))
         {
             connection.Open();
 
@@ -29,7 +31,7 @@ public class  ClienteRepository
     public List<Cliente> ListarClientes()
     {
         List<Cliente> clientes = new List<Cliente>();
-        using(SqliteConnection connection = SqliteConnection(connectionString))
+        using(SqliteConnection connection = new SqliteConnection(connectionString))
         {
             connection.Open();
 
@@ -37,7 +39,7 @@ public class  ClienteRepository
 
             var command = new SqliteCommand(query, connection);
 
-            using(var reader = command.ExecuteReader(query, connection))
+            using(var reader = command.ExecuteReader())
             {
                 while(reader.Read())
                 {
@@ -51,5 +53,31 @@ public class  ClienteRepository
         }
         
         return clientes;
+    }
+
+    public Cliente ObtenerCliente(int idCliente)
+    {
+        Cliente cliente = null;
+        using(SqliteConnection connection = new SqliteConnection(connectionString))
+        {
+            connection.Open();
+
+            string query = "SELECT * FROM Clientes WHERE ClienteId = @idCliente;";
+
+            var command = new SqliteCommand(query, connection);
+            command.Parameters.AddWithValue("@idCliente", idCliente);
+
+            using(var reader = command.ExecuteReader())
+            {
+                while(reader.Read())
+                {
+                    cliente = new Cliente(Convert.ToInt32(reader["ClienteId"]), reader["Nombre"].ToString(), reader["Email"].ToString(), reader["Telefono"].ToString());
+                }
+            }
+            connection.Close();
+
+        }
+        
+        return cliente;
     }
 }
